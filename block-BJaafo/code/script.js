@@ -5,14 +5,15 @@ function getFullName(firstName, lastName){
   return firstName + " " + lastName;    
 }   
 
-let output = getFullName();
-
-if(output !== getFullName()){
+let output = getFullName("vikas", "singh"); 
+let expected = "vikas singhh"
+if(output !== expected){
     throw new Error("not equal");
 }
 
-
-if(output === getFullName()){
+output= getFullName("arya", "strak");
+expected = "arya stark";
+if(output === expected){
     throw new Error("not equal");
 }
 `
@@ -25,13 +26,13 @@ function totalAmount(amount, taxrate){
     return amount + taxrate;
 }
 
-let result = totalAmount();
-
-if(result  !== totalAmount()){
+let result = totalAmount(20,10);
+expectedOne = 31
+if(result  !== expectedOne){
     throw new Error("not equal")
 }
 
-if(result  === totalAmount()){
+if(result  === expectedOne){
     throw new Error("equal")
 }
 `
